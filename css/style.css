@@ -1,0 +1,1238 @@
+/* リセットCSS */
+html {
+    font-size: 16px;
+    font-family: sans-serif;
+    /* 常に縦のスクロールバーを表示させて画面幅を固定する */
+    overflow-y: scroll;
+    /* （前回のスムーズスクロールも残す場合は以下のように並べます） */
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    line-height: 1.5;
+}
+
+/* ==========
+ヘッダー 
+=============*/
+header {
+    width: 100%;
+    background-color: #fff;
+    height: 90px;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 0 20px;
+}
+
+/* PC版ではhamburgerボタンを隠す */
+.burger-btn {
+    display: none;
+}
+
+.headerInner {
+    max-width: 1080px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 img {
+    width: 150px;
+    height: auto;
+
+}
+
+/* ナビゲーション */
+nav {
+    margin-left: auto;
+    margin-right: 40px;
+    align-self: flex-end;
+}
+
+nav ul {
+    display: flex;
+    gap: 40px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    align-items: flex-end;
+}
+
+nav a {
+    color: #000;
+    text-decoration: none;
+    display: inline-block;
+    padding-bottom: 6px;
+    border-bottom: 3px solid transparent;
+    box-sizing: border-box
+}
+
+nav a:hover {
+    color: #37952F;
+}
+
+nav a.current {
+    color: #000;
+    border-bottom: 3px solid #37952F;
+}
+
+/* 本日営業・天気 */
+.shopWeather {
+    gap: 20px;
+    display: flex;
+    align-self: center;
+}
+
+.shopOpen {
+    text-align: center;
+}
+
+.weather {
+    align-items: center;
+}
+
+.dateTime {
+    font-size: 1.4rem;
+}
+
+.year {
+    font-size: 1rem;
+}
+
+.shopWeather img {
+    width: 36px;
+    height: auto;
+}
+
+/* 背景 */
+main {
+    background-color: #DDEAD7;
+}
+
+/* ==========
+フッター
+============= */
+
+footer {
+    background-color: #38A937;
+    color: #fff;
+    position: relative;
+}
+
+.footerMountain {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    width: 1080px;
+    /* 画面幅が1080pxより小さくなったら、画面幅に合わせて縮む */
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.footerInner2 h3 {
+    margin-top: 0;
+}
+
+.footerInner {
+    max-width: 1080px;
+    margin: 0 auto;
+    z-index: 9999;
+}
+
+.footerInner2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.infoIcon {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    align-items: center;
+}
+
+.shopInfo p {
+    margin-top: 10px;
+}
+
+.pageTop {
+    text-align: center;
+    margin: 0px auto;
+    width: 100%;
+
+}
+
+.pageTop a {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    background-color: #38A937;
+    color: #fff;
+    cursor: pointer;
+}
+
+.pageTop img {
+    padding-top: 10px;
+}
+
+.shopAddress {
+    padding-bottom: 20px;
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝＝
+ページ　インデックス
+＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+/* キービジュアル */
+.keyVisual {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1920px;
+    display: block;
+    aspect-ratio: 1920/608;
+}
+
+.keyVisualImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.catchphrase1 {
+    position: absolute;
+    color: #fff;
+    top: 25%;
+    left: 20%;
+    z-index: 10;
+    text-shadow: 2px 2px 8px #000;
+
+}
+
+.logo_2 {
+    position: absolute;
+    top: 70%;
+    right: 4%;
+    z-index: 10;
+    /* サイズ修正 */
+    width: 14.5%;
+    max-width: 250px;
+    min-width: 120px;
+    height: auto;
+    opacity: 60%;
+}
+
+/* お店について */
+.aboutShop {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+
+}
+
+.aboutShop p {
+    padding: 20px;
+}
+
+/* アクセス（メイン） */
+section {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.illustration1 {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    padding: 20px;
+
+}
+
+.circleBg1 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    background-color: #06559D;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: 500;
+
+    /* 文字を丸の中央に配置する場合 */
+    text-align: center;
+    line-height: 1.7;
+}
+
+.circleBg2 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    background-color: #38A937;
+    border-radius: 50%;
+    padding: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.circleBg2 img {
+    width: 98%;
+    height: auto;
+}
+
+/* ライン「徒歩41分」のpタグを基準位置にする */
+.illustration1 p:nth-child(2) {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    /* 文字の意図しない改行を防ぐ */
+}
+
+/* 左側の線（駅の丸へ繋ぐ） */
+.illustration1 p:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    /* 文字の左側から伸ばす */
+    top: 50%;
+    /* 上下中央に配置 */
+    transform: translateY(-50%);
+    width: 34px;
+    /* 線の長さ（gapの値に合わせて調整） */
+    height: 2px;
+    /* 線の太さ */
+    background-color: #464646;
+    /* 線の色（カフェの緑色に合わせています） */
+}
+
+/* 右側の線（カフェの丸へ繋ぐ） */
+.illustration1 p:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    left: 100%;
+    /* 文字の右側から伸ばす */
+    top: 50%;
+    /* 上下中央に配置 */
+    transform: translateY(-50%);
+    width: 34px;
+    /* 線の長さ（gapの値に合わせて調整） */
+    height: 2px;
+    /* 線の太さ */
+    background-color: #464646;
+    /* 線の色 */
+}
+
+.accessText1 {
+    font-size: small;
+}
+
+.map1 iframe {
+    width: 100%;
+    height: 450px;
+}
+
+.map1 {
+    box-sizing: border-box;
+    padding: 20px;
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.access1 {
+    display: flex;
+    align-items: flex-start;
+    /* 縦方向は上揃えにして崩れを防ぐ */
+    gap: 40px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 左側の3つの要素をまとめる枠 */
+.access-left {
+    display: flex;
+    flex-direction: column;
+    /* 💡 3つの要素を上から下へ縦並びにする */
+    gap: 20px;
+    /* 縦並びの要素同士の間隔 */
+    flex-shrink: 0;
+    /* 絶対に縮ませない */
+    width: 400px;
+    /* PC版の左側の固定幅 */
+}
+
+/* スマホ用の空箱はPC版では消しておく */
+.map-placeholder-sp {
+    display: none;
+}
+
+/* 共通ボタン */
+.btn1 {
+    border: none;
+    width: 300px;
+    background-color: #F3D05A;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 20px;
+    display: inline-block;
+    margin: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: block;
+    color: #000;
+    padding: 10px;
+    font-size: medium;
+    font-weight: 500;
+}
+
+/* 店内 */
+.shop {
+    max-width: 1080px;
+    display: flex;
+    /* 左右の配置を反転させる */
+    flex-direction: row-reverse;
+}
+
+.shopText1 {
+    margin-bottom: 20px;
+}
+
+.shopText p {
+    margin-bottom: 20px;
+}
+
+.icon_shop {
+    display: flex;
+    gap: 20px;
+    margin-left: 40px;
+    /* 【解決策1】中身の画像が縦に引き伸ばされるのを絶対に防ぐ */
+    align-items: center;
+}
+
+.shopImage1 {
+    width: 50%;
+    height: auto;
+    margin: 20px auto 20px 0;
+    border-radius: 10px;
+}
+
+.backpack {
+    margin-top: 15px;
+
+}
+
+/* テラス席 */
+.terrace {
+    max-width: 1080px;
+    display: flex;
+    padding-bottom: 160px;
+}
+
+.terraceImage {
+    width: 50%;
+    height: auto;
+    margin: 20px 0 20px auto;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.terrace p {
+    margin-bottom: 20px;
+}
+
+.icon_dog {
+    width: 100%;
+    height: auto;
+    margin-left: 40px;
+}
+
+
+
+/*＝＝＝＝＝＝＝＝＝＝＝
+ ページ　メニュー
+ ＝＝＝＝＝＝＝＝＝＝＝＝ */
+/* メニュー第一階層 */
+.menu1 {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding-bottom: 160px;
+}
+
+.menu1 h2 {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.menu1 span {
+    /* font-weight: 600; */
+    font-size: 1.5rem;
+    display: block;
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: -15px;
+}
+
+.menu1 p {
+    width: 320px;
+    text-align: center;
+}
+
+.coffee {
+    width: 320px;
+    height: 180px;
+    background-color: #fff;
+    object-fit: contain;
+}
+
+.items1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding-bottom: 40px;
+}
+
+.items1 img {
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* メニュー　第二階層_ドリンク */
+.menu2 {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding-bottom: 140px;
+}
+
+.menu2 p {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.menu2 span {
+    /* font-weight: 600; */
+    font-size: 1.5rem;
+    /* display: block; */
+    /* padding-top: 20px; */
+    /* margin-bottom: -15px; */
+}
+
+.menu2 p {
+    width: 320px;
+}
+
+.menu2 li {
+    width: 320px;
+}
+
+.items2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding-bottom: 40px;
+}
+
+.items2 img {
+    border-radius: 10px;
+}
+
+.items2>div p {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.backBtn {
+    color: #000;
+    border: none;
+    width: 200px;
+    background-color: #F3D05A;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0 4px 12px #7c7c7c;
+}
+
+/* メニュー共通 */
+.pankuzu {
+    color: #000;
+}
+
+/* メニュー　第二階層_ランチ */
+.menu3 {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding-bottom: 140px;
+}
+
+.menu3 p {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.menu3 li {
+    width: 320px;
+}
+
+.menu3 span {
+    /* font-weight: 600; */
+    font-size: 1.5rem;
+    /* display: block; */
+    /* padding-top: 20px; */
+    /* margin-bottom: -15px; */
+}
+
+.menu3 p {
+    width: 320px;
+}
+
+.items3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding-bottom: 40px;
+}
+
+.items3 img {
+    border-radius: 10px;
+}
+
+.items3>div p {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+/* メニュー第二階層_フィンガーフード */
+.menu4 {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding-bottom: 140px;
+}
+
+.menu4 p {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.menu4 li {
+    width: 320px;
+}
+
+.menu4 span {
+    /* font-weight: 600; */
+    font-size: 1.5rem;
+    /* display: block; */
+    /* padding-top: 20px; */
+    /* margin-bottom: -15px; */
+}
+
+.menu4 p {
+    width: 320px;
+}
+
+.items4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding-bottom: 40px;
+}
+
+.items4 img {
+    border-radius: 10px;
+}
+
+.items4>div p {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝
+ページ_ロケーション
+＝＝＝＝＝＝＝＝＝＝＝＝ */
+.location {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding-bottom: 140px;
+}
+
+.location h2 {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.satoyamaImg {
+    width: 50%;
+    border-radius: 10px;
+}
+
+.img_openclose {
+    display: flex;
+    justify-content: space-between;
+}
+
+.openDetail {
+    font-size: x-large;
+}
+
+.open {
+    padding-bottom: 20px;
+}
+
+.openCaution {
+    font-size: 1.2rem;
+    color: #7D1401;
+    text-decoration: underline;
+    padding-bottom: 0;
+    padding-top: 10px;
+}
+
+.comeon {
+    font-size: 1.5rem;
+}
+
+.titleIcon1 {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.locationText1 {
+    padding: 10px;
+}
+
+.locatioMap1 {
+    width: 600px;
+    height: auto;
+    object-fit: contain;
+    /* 横幅500pxの中に、比率を崩さず全体を収める */
+}
+
+.locationBus {
+    display: flex;
+}
+
+.locationMap2 {
+    width: 1080px;
+    height: auto;
+    padding-bottom: 40px;
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝
+ページ_ハイク
+＝＝＝＝＝＝＝＝＝＝＝＝ */
+.hike {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding-bottom: 140px;
+}
+
+.hikeTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.hikeText2 {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.hikeMap1,
+.hikeMap2 {
+    width: auto;
+    height: 460px;
+    padding-bottom: 40px;
+}
+
+.hikeMap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hikeMap p {
+    width: 420px;
+}
+
+.hikeMap div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.hikeMapText1 {
+    text-align: right;
+}
+
+.hikeText3 {
+    font-size: 1.2rem;
+}
+
+.hikeOther {
+    display: flex;
+    justify-content: center;
+}
+
+.hikeOtherText {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝
+スマホ対応 
+＝＝＝＝＝＝＝＝＝＝＝＝*/
+@media (max-width: 767px) {
+
+    /* ＝＝＝＝＝＝＝＝＝＝
+ヘッダー
+＝＝＝＝＝＝＝＝＝＝＝＝ */
+    h1 img {
+        width: 120px;
+        height: auto;
+    }
+
+    .dateTime {
+        /* font-size: 1.0rem; */
+        display: none !important;
+    }
+
+    /* ＝＝＝＝＝＝＝＝＝＝
+    ハンバーガーボタン 
+    ＝＝＝＝＝＝＝＝＝＝＝＝*/
+    .burger-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 22px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        position: absolute;
+        right: 20px;
+        /* top: 50%; */
+        z-index: 110;
+    }
+
+    /* 三本線の共通スタイル */
+    .burger-btn .bar {
+        width: 100%;
+        height: 3px;
+        background-color: #000;
+        /* アニメーションの速度設定 */
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    /*   ボタンをクリックした時（.is-open クラスがついた時）の「×」印アニメーション */
+    .burger-btn.is-open .bar:nth-child(1) {
+        transform: translateY(9.5px) rotate(45deg);
+        /* 1本目を傾ける */
+    }
+
+    .burger-btn.is-open .bar:nth-child(2) {
+        opacity: 0;
+        /* 2本目を消す */
+    }
+
+    .burger-btn.is-open .bar:nth-child(3) {
+        transform: translateY(-9.5px) rotate(-45deg);
+        /* 3本目を逆に傾ける */
+    }
+
+    /* スマホ用メニューの初期状態（隠しておく） */
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        /* 画面全体の高さ */
+        background-color: rgba(255, 255, 255, 0.7);
+        /* 背景色（少し透過） */
+        z-index: 100;
+
+        /* 最初は非表示（透明＆クリック不可）にする */
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+
+        /* 縦横中央に配置するための設定 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*  ボタンをクリックした時（.is-open クラスがついた時）にメニューを表示 */
+    nav.is-open {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* スマホ時はナビゲーションを縦並びにする */
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 中央揃え */
+        gap: 40px;
+    }
+
+    nav a {
+        font-size: 24px;
+        /* スマホ用に文字を少し大きく */
+    }
+
+    /* ＝＝＝＝＝＝＝＝＝＝
+フッター
+＝＝＝＝＝＝＝＝＝＝＝＝ */
+    .footerInner {
+        padding: 0 20px 0 20px;
+    }
+
+    .footerInner2 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .shopInfo {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-top: 20px;
+    }
+
+    .shopInfo p {
+        display: block;
+        width: 220%;
+        margin-top: 20px;
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+
+    /* ＝＝＝＝＝＝＝＝＝＝
+コンテンツ　インデックス 
+＝＝＝＝＝＝＝＝＝＝＝＝*/
+
+    /* キービジュアル   */
+    .keyVisual {
+        aspect-ratio: 9/14;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .logo_2 {
+        top: auto;
+        bottom: 5%;
+        right: 5%;
+        width: 25%;
+        /* min-width: 80px; */
+    }
+
+    .catchphrase1 {
+        left: 50%;
+        transform: translateX(-50%);
+        /* キャッチコピー自身の幅の半分だけ左に戻して中央揃え */
+        white-space: nowrap;
+        /* 画面幅が狭くても途中で意図しない改行が起きるのを防ぐ */
+        text-align: center;
+        /* 複数行になった場合もテキスト自体を中央揃えにする */
+    }
+
+    /* アクセス（メイン） */
+    .access {
+        padding: 0 20px 0 20px;
+    }
+
+    /* 横並びを解除して縦並びにする */
+    .access1 {
+        flex-direction: column;
+        gap: 20px;
+    }
+.access1Text{
+    margin: 0 auto;
+}
+    /* 左右の幅をそれぞれ100%に広げる */
+    .access-left,
+    .map1 {
+        width: 100% !important;
+    }
+
+    /* 🛠️ スマホ版で「地図を途中に割り込ませる」魔法の並び替え */
+    .access-left {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .illustration1 {
+        order: 1;
+        padding: 0;
+        margin: 20px auto;
+    }
+
+    .map1 {
+        order: 2;
+        padding: 20px 0;
+    }
+
+    /* 💡 地図を2番目に持ってくる */
+    .accessText1 {
+        order: 3;
+    }
+
+    .btn1 {
+        order: 4;
+        margin: 20px auto;
+    }
+
+    /* スマホ時はマップの高さを少し縮める */
+    .map1 iframe {
+        height: 300px !important;
+    }
+
+    /* 店内 */
+    .shop {
+        padding: 0 20px 0 20px;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .shopImage1 {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .icon_shop img {
+        width: 50%;
+        height: auto;
+    }
+
+    .backpack {
+        margin-top: 12px;
+        width: 42% !important;
+        height: auto !important;
+    }
+
+    .icon_shop {
+        margin: 0 auto;
+    }
+
+    /* テラス席 */
+
+    .terrace {
+        padding: 0 20px;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .terraceImage {
+        width: 100%;
+        margin-top: 20px;
+        padding-bottom: 80px;
+    }
+
+    .icon_dog {
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* ＝＝＝＝＝＝＝＝＝＝＝
+コンテンツ‗メニュー 
+＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+    .menu1 {
+        padding: 0 20px;
+    }
+
+    .items1 {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 40px;
+        padding-top: 10px;
+    }
+
+    /* ＝＝＝＝＝＝＝＝＝＝
+コンテンツ_メニュー_ドリンク
+＝＝＝＝＝＝＝＝＝＝＝＝ */
+    .menu2 {
+        padding: 0 20px;
+    }
+
+    .items2 {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 40px;
+        padding-top: 10px;
+    }
+
+    /* ＝＝＝＝＝＝＝＝＝＝
+コンテンツ_メニュー_ランチ
+＝＝＝＝＝＝＝＝＝＝＝＝ */
+    .menu3 {
+        padding: 0 20px;
+    }
+
+    .items3 {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 40px;
+        padding-top: 10px;
+    }
+
+    /* ＝＝＝＝＝＝＝＝＝＝
+コンテンツ_メニュー_フィンガーフード
+＝＝＝＝＝＝＝＝＝＝＝＝ */
+    .menu4 {
+        padding: 0 20px;
+    }
+
+    .items4 {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 40px;
+        padding-top: 10px;
+    }
+
+    /* ＝＝＝＝＝＝＝＝＝＝
+コンテンツ_ロケーション 
+＝＝＝＝＝＝＝＝＝＝＝＝*/
+    .location {
+        padding: 0 20px;
+    }
+
+    .img_openclose {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .satoyamaImg {
+        width: 100%;
+        padding-bottom: 10px;
+    }
+
+    .img_openclose .openclose {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .openclose .open,
+    .openclose .closed {
+        display: flex;
+        flex-direction: column;
+        width: 48%;
+    }
+
+    .openCaution {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    /* カフェの店舗情報：幅100%にして、Open/Closedの下にしっかり回り込ませる */
+    .openclose>p {
+        width: 100%;
+
+    }
+
+    .openDetail {
+        margin-top: 0px;
+    }
+
+    .locationBus {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .locatioMap1 {
+        width: 100%;
+        padding-bottom: 10px;
+    }
+
+    .locationMap2 {
+        width: 100%;
+        padding-bottom: 10px;
+        padding-bottom: 60px;
+    }
+
+    /* ＝＝＝＝＝＝＝＝＝＝
+コンテンツ_ハイク 
+＝＝＝＝＝＝＝＝＝＝＝＝*/
+    .hike {
+        padding: 0 20px;
+    }
+
+    .hikeMap {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hikeMap P {
+        width: 100%;
+    }
+
+    .hikeMap img {
+        width: 100%;
+        height: auto;
+    }
+
+    .hikeOther {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 60px;
+    }
+
+    .hikeOtherText {
+        text-align: left;
+    }
+}

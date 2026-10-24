@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SatoYama cafe</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="headerInner">
+            <h1><a href="index.html"><img src="images/logo_1.svg" alt="里山カフェ"></a></h1>
+            <!-- ハンバーガーボタン -->
+            <button class="burger-btn" aria-label="メニューを開閉する">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">About us</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="location.html">location</a></li>
+                    <li><a href="hike.html" class="current">Hike</a></li>
+                    <li><a href="#">Calender</a></li>
+                </ul>
+            </nav>
+            <section class="shopWeather">
+                <div class="shopOpen">
+                    <p>本日営業</p>
+                    <img src="images/Icon_open.svg" alt="オープン">
+                </div>
+                <div class="weather">
+                    <p>天気</p>
+                    <img src="images/Icon_cloud_sunny.svg" alt="曇りのち晴れ">
+                </div>
+
+                <div class="dateTime">
+                    <p>
+                        <span class="year">2026 </span>10/29<br>
+                        9:00-16:00
+                    </p>
+                </div>
+            </section>
+        </div>
+    </header>
+
+    <main>
+       <section class="hike">
+            <div class="hikeTitle">
+                <img src="images/Icon_hiker.png" alt="ハイカー">
+                <h2 class="hikeText1">ハイキングコース</h2>
+            </div>
+    
+            <h2 class="hikeText2">四季折々に表情を変えるハイキングコースが数多く設定されています。<br>雑木林や田んぼ、ため池といった里山の景観を楽しみながら、歩いてみてください。<br>天候によって足場がぬかるむことがあるため、歩きやすい服装と靴がおすすめです。<br>水分補給をお忘れなく。
+            </h2>
+            <div class="hikeMap">
+                <div>
+                    <p class="hikeText3">〈小田急線唐木田駅～小山田緑地サービスセンター～SatoYama cafe（奈良ばい谷戸）コース〉</p>
+                    <p class="hikeMapText1">3.3km・約50分</p>
+                    <img src="images/hikeImg783x798.png" alt="" class="hikeMap1">
+                </div>
+                <div>
+                    <p class="hikeText3">〈一本杉公園バス停～小野路里山交流館～SatoYama cafe（奈良ばい谷戸）コース</p>
+                    <p class="hikeMapText1">2.5km・約40分</p>
+                    <img src="images/hikeImg530x653.png" alt="" class="hikeMap2">
+                </div>
+            </div>
+            <p class="hikeOtherText">他にも、様々なハイキングコースがあります</p>
+            <div class="hikeOther">
+                <a class="btn1"
+                        href="https://www.tokyo-park.or.jp/special/tama/enjoy/hiking/index.html" target="_blank" rel="noopener noreferrer">東京都公園協会</a>
+        
+                <a class="btn1"
+                        href="https://www.yamakei-online.com/yama-ya/detail.php?id=3672&pg=3" target="_blank" rel="noopener noreferrer">山と渓谷オンライン</a>
+            </div>
+    
+       </section>
+    </main>
+
+    <footer>
+         <!-- 山モチーフを入れる -->
+        <img src="images/motifMountain.svg" alt="山のモチーフ" class="footerMountain">
+        <!-- 山モチーフを入れる、ここまで -->
+        <div class="footerInner">
+            <div class="pageTop"> <a href="#"><span><img src="images/Icon_up__.svg" alt="ページトップ"></span>PageTop</a>
+            </div>
+
+            <div class="footerInner2">
+                <div class="shopAddress">
+                    <h3>SatoYama Cafe</h3>
+                    <p>
+                        194-0203<br>
+                        町田市図師町里山6123<br>
+                        042-777-7777
+                    </p>
+                </div>
+
+                <div class="shopInfo">
+                    <div class="infoIcon">
+                        <img src="images/Icon_insta.png" alt="インスタ">
+                        <img src="images/Icon_twitter.png" alt="ツイッター">
+                        <img src="images/Icon_facebook.png" alt="フェイスブック">
+                    </div>
+
+                    <p>&copy;2026 SatoYama cafe All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+ <script>
+        // ボタンとナビゲーションの要素を取得
+        const burgerBtn = document.querySelector('.burger-btn');
+        const navMenu = document.querySelector('nav');
+
+        // ボタンがクリックされた時の処理
+        burgerBtn.addEventListener('click', function () {
+            // ボタンとメニューに「is-open」クラスを同時につけ外し（トグル）する
+            burgerBtn.classList.toggle('is-open');
+            navMenu.classList.toggle('is-open');
+        });
+    </script>
+</body>
+
+</html>
