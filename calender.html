@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SatoYama cafe</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+
+<body>
+    <header>
+        <div class="headerInner">
+            <h1><a href="index.html"><img src="images/logo_1.svg" alt="里山カフェ"></a></h1>
+            <!-- ハンバーガーボタン -->
+            <button class="burger-btn" aria-label="メニューを開閉する">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">About us</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="location.html">Location</a></li>
+                    <li><a href="hike.html">Hike</a></li>
+                    <li><a href="calender.html" class="current">Calender</a></li>
+                </ul>
+            </nav>
+            <section class="shopWeather">
+                <div class="shopOpen">
+                    <p>本日営業</p>
+                    <img src="images/Icon_open.svg" alt="オープン">
+                </div>
+                <div class="weather">
+                    <p>天気</p>
+                    <img src="images/Icon_cloud_sunny.svg" alt="曇りのち晴れ">
+                </div>
+
+                <div class="dateTime">
+                    <p>
+                        <span class="year">2026 </span>10/29<br>
+                        9:00-16:00
+                    </p>
+                </div>
+            </section>
+        </div>
+    </header>
+
+    <main>
+<p class="construction">メンテナンス中</p>
+
+
+    </main>
+
+    <footer>
+         <!-- 山モチーフを入れる -->
+        <img src="images/motifMountain.svg" alt="山のモチーフ" class="footerMountain">
+        <!-- 山モチーフを入れる、ここまで -->
+        <div class="footerInner">
+            <div class="pageTop"> <a href="#"><span><img src="images/Icon_up__.svg" alt="ページトップ"></span>PageTop</a>
+            </div>
+
+            <div class="footerInner2">
+                <div class="shopAddress">
+                    <h3>SatoYama Cafe</h3>
+                    <p>
+                        194-0203<br>
+                        町田市図師町里山6123<br>
+                        042-777-7777
+                    </p>
+                </div>
+
+                <div class="shopInfo">
+                    <div class="infoIcon">
+                        <img src="images/Icon_insta.png" alt="インスタ">
+                        <img src="images/Icon_twitter.png" alt="ツイッター">
+                        <img src="images/Icon_facebook.png" alt="フェイスブック">
+                    </div>
+
+                    <p>&copy;2026 SatoYama cafe All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script>
+        // ボタンとナビゲーションの要素を取得
+        const burgerBtn = document.querySelector('.burger-btn');
+        const navMenu = document.querySelector('nav');
+
+        // ボタンがクリックされた時の処理
+        burgerBtn.addEventListener('click', function () {
+            // ボタンとメニューに「is-open」クラスを同時につけ外し（トグル）する
+            burgerBtn.classList.toggle('is-open');
+            navMenu.classList.toggle('is-open');
+        });
+    </script>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    
+</body>
+
+</html>

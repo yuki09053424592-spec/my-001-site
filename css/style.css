@@ -23,7 +23,10 @@ html {
 header {
     width: 100%;
     background-color: #fff;
-    height: 90px;
+
+    height: auto;
+    min-height: 90px;
+
     border-bottom: 1px solid #e0e0e0;
     position: sticky;
     top: 0;
@@ -43,7 +46,8 @@ header {
 .headerInner {
     max-width: 1080px;
     margin: 0 auto;
-    height: 100%;
+    /* height: 100%; */
+    min-height: 90px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,6 +56,7 @@ header {
 h1 img {
     width: 150px;
     height: auto;
+    display: block;
 
 }
 
@@ -64,10 +69,11 @@ nav {
 
 nav ul {
     display: flex;
+    padding: 0 0 0 20px;
     gap: 40px;
     font-weight: bold;
     margin: 0;
-    padding: 0;
+
     align-items: flex-end;
 }
 
@@ -93,15 +99,12 @@ nav a.current {
 .shopWeather {
     gap: 20px;
     display: flex;
-    align-self: center;
-}
-
-.shopOpen {
-    text-align: center;
-}
-
-.weather {
     align-items: center;
+}
+
+.shopOpen,
+.weather {
+    text-align: center;
 }
 
 .dateTime {
@@ -175,7 +178,11 @@ footer {
     text-align: center;
     margin: 0px auto;
     width: 100%;
+    transition: opacity 0.3s;
+}
 
+.pageTop:hover {
+    opacity: 0.6;
 }
 
 .pageTop a {
@@ -195,6 +202,9 @@ footer {
 .shopAddress {
     padding-bottom: 20px;
 }
+.shopInfo{
+    padding-top: 26px;
+}
 
 /* ＝＝＝＝＝＝＝＝＝＝＝
 ページ　インデックス
@@ -205,11 +215,21 @@ footer {
     margin: 0 auto;
     width: 100%;
     max-width: 1920px;
-    display: block;
+    /* aspect-ratio: 1920/608; */
+}
+
+/* ★変更：画像2枚を包むコンテナを親（.keyVisual）と同じサイズで広げる */
+.keyVisualImg2 {
+    width: 100%;
+}
+
+.keyVisualImg2 .slick-slide {
+    /* height: 608px; */
+    width: 100%;
     aspect-ratio: 1920/608;
 }
 
-.keyVisualImg {
+.keyVisualImg2 .slick-slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -219,11 +239,10 @@ footer {
 .catchphrase1 {
     position: absolute;
     color: #fff;
-    top: 25%;
+    top: 15%;
     left: 20%;
     z-index: 10;
     text-shadow: 2px 2px 8px #000;
-
 }
 
 .logo_2 {
@@ -282,7 +301,6 @@ h3 {
     border-radius: 50%;
     color: #fff;
     font-weight: 500;
-
     /* 文字を丸の中央に配置する場合 */
     text-align: center;
     line-height: 1.7;
@@ -353,6 +371,7 @@ h3 {
 
 .accessText1 {
     font-size: small;
+
 }
 
 .map1 iframe {
@@ -410,6 +429,11 @@ h3 {
     padding: 10px;
     font-size: medium;
     font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn1:hover {
+    background-color: #FFBD60
 }
 
 /* 店内 */
@@ -485,6 +509,12 @@ h3 {
     padding-bottom: 160px;
 }
 
+.menuText {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 40px 0;
+}
+
 .menu1 h2 {
     padding: 40px 0;
     text-align: center;
@@ -499,16 +529,21 @@ h3 {
     margin-bottom: -15px;
 }
 
-.menu1 p {
+.items1 p {
     width: 320px;
     text-align: center;
 }
 
 .coffee {
-    width: 320px;
+    /* width: 320px;
     height: 180px;
     background-color: #fff;
-    object-fit: contain;
+    object-fit: contain; */
+    transition: opacity 0.3s;
+}
+
+.coffee:hover {
+    opacity: 0.8;
 }
 
 .items1 {
@@ -522,6 +557,7 @@ h3 {
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
+
 
 /* メニュー　第二階層_ドリンク */
 .menu2 {
@@ -582,6 +618,13 @@ h3 {
     padding-top: 10px;
     padding-bottom: 10px;
     box-shadow: 0 4px 12px #7c7c7c;
+    font-size: medium;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.backBtn:hover {
+    background-color: #FFBD60
 }
 
 /* メニュー共通 */
@@ -690,20 +733,33 @@ h3 {
     padding-bottom: 140px;
 }
 
-.location h2 {
+.locationText2 {
+    font-size: 1.2rem;
     text-align: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
 }
 
 .satoyamaImg {
     width: 50%;
+    height: auto;
+    aspect-ratio: 1000 / 559;
+    object-fit: cover;
     border-radius: 10px;
+    flex-shrink: 0;
 }
 
 .img_openclose {
     display: flex;
     justify-content: space-between;
+    gap: 20px;
+}
+
+.openclose {
+    width: calc(50%-20px);
+    flex-shrink: 1;
+    /* 💡 画面が狭くなったら、こちら側が優先的に縮みます */
+    min-width: 0;
+    /* 💡 Flexbox内で文字がはみ出して崩れるのを防ぐ魔法の1行 */
 }
 
 .openDetail {
@@ -773,10 +829,15 @@ h3 {
     padding-bottom: 20px;
 }
 
+.hikeText1 {
+    font-size: 1.2rem;
+}
+
 .hikeText2 {
     text-align: center;
     padding-top: 20px;
     padding-bottom: 40px;
+    font-size: 1.2rem;
 }
 
 .hikeMap1,
@@ -799,7 +860,7 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 5px;
 }
 
 .hikeMapText1 {
@@ -819,6 +880,20 @@ h3 {
     text-align: center;
     font-size: 1.2rem;
 }
+
+/* ＝＝＝＝＝＝＝＝＝＝
+ページ_カレンダ― 
+＝＝＝＝＝＝＝＝＝＝＝＝*/
+.construction {
+    padding-top: 200px;
+    padding-bottom: 300px;
+    text-align: center;
+    font-size: 3rem;
+    color: #38A937;
+}
+
+
+
 
 /* ＝＝＝＝＝＝＝＝＝＝
 スマホ対応 
@@ -890,7 +965,7 @@ h3 {
         width: 100%;
         height: 100vh;
         /* 画面全体の高さ */
-        background-color: rgba(255, 255, 255, 0.7);
+        background-color: rgba(255, 255, 255, 0.8);
         /* 背景色（少し透過） */
         z-index: 100;
 
@@ -929,33 +1004,34 @@ h3 {
 フッター
 ＝＝＝＝＝＝＝＝＝＝＝＝ */
     .footerInner {
-        padding: 0 20px 0 20px;
+        padding: 0 20px;
     }
 
     .footerInner2 {
-        display: flex;
-        flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
-        width: 100%;
+    }
+
+    .shopAddress {
+        width: 50%;
+        padding-bottom: 0;
     }
 
     .shopInfo {
-        width: 45%;
+        display: contents;
+    }
+
+    .infoIcon {
+        width: 50%;
         display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        padding-top: 20px;
+        justify-content: flex-end;
     }
 
     .shopInfo p {
-        display: block;
-        width: 220%;
+
+        width: 100%;
         margin-top: 20px;
         text-align: center;
-        padding-top: 40px;
-        padding-bottom: 20px;
+        margin-bottom: 20px;
     }
 
     /* ＝＝＝＝＝＝＝＝＝＝
@@ -964,8 +1040,14 @@ h3 {
 
     /* キービジュアル   */
     .keyVisual {
-        aspect-ratio: 9/14;
+        aspect-ratio: auto;
+        /* aspect-ratio: 9/14;
         object-fit: cover;
+        width: 100%; */
+    }
+
+    .keyVisualImg2 .slick-slide {
+        aspect-ratio: 9/14;
         width: 100%;
     }
 
@@ -997,9 +1079,11 @@ h3 {
         flex-direction: column;
         gap: 20px;
     }
-.access1Text{
-    margin: 0 auto;
-}
+
+    .access1Text {
+        margin: 0 auto;
+    }
+
     /* 左右の幅をそれぞれ100%に広げる */
     .access-left,
     .map1 {
@@ -1016,11 +1100,13 @@ h3 {
         order: 1;
         padding: 0;
         margin: 20px auto;
+display: flex;
+justify-content: center;
     }
 
     .map1 {
         order: 2;
-        padding: 20px 0;
+        padding: 0 0 20px 0;
     }
 
     /* 💡 地図を2番目に持ってくる */
@@ -1036,8 +1122,10 @@ h3 {
     /* スマホ時はマップの高さを少し縮める */
     .map1 iframe {
         height: 300px !important;
-    }
-
+            }
+.accessText1{
+    padding-top: 20px;
+}
     /* 店内 */
     .shop {
         padding: 0 20px 0 20px;
@@ -1078,7 +1166,8 @@ h3 {
     .terraceImage {
         width: 100%;
         margin-top: 20px;
-        padding-bottom: 80px;
+        margin-bottom: 70px;
+
     }
 
     .icon_dog {
@@ -1114,6 +1203,10 @@ h3 {
         justify-items: center;
         gap: 40px;
         padding-top: 10px;
+    }
+
+    .backBtn {
+        margin-bottom: 80px;
     }
 
     /* ＝＝＝＝＝＝＝＝＝＝
@@ -1158,7 +1251,6 @@ h3 {
 
     .satoyamaImg {
         width: 100%;
-        padding-bottom: 10px;
     }
 
     .img_openclose .openclose {
@@ -1210,6 +1302,16 @@ h3 {
 ＝＝＝＝＝＝＝＝＝＝＝＝*/
     .hike {
         padding: 0 20px;
+    }
+
+    .hikeTitle {
+        padding-bottom: 0;
+    }
+
+    .hikeText2 {
+
+        text-align: center;
+        padding-bottom: 40px;
     }
 
     .hikeMap {

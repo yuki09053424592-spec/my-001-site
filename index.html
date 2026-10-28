@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SatoYama cafe</title>
-    <link rel="stylesheet" href="css/style.css">
+
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
-    <script src="js/jquery-1.10.2.min.js"></script>
-    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+
 </head>
 
 <body>
@@ -26,9 +27,9 @@
                 <ul>
                     <li><a href="index.html" class="current">About us</a></li>
                     <li><a href="menu.html">Menu</a></li>
-                    <li><a href="location.html">location</a></li>
+                    <li><a href="location.html">Location</a></li>
                     <li><a href="hike.html">Hike</a></li>
-                    <li><a href="#">Calender</a></li>
+                    <li><a href="calender.html">Calender</a></li>
                 </ul>
             </nav>
             <section class="shopWeather">
@@ -55,8 +56,10 @@
         <!-- キービジュアル -->
 
         <div class="keyVisual">
-            <img src="images/keyVisual1_.jpg" alt="里山風景" class="keyVisualImg">
-            <img src="images/keyVisual2.jpg" alt="カフェイメージ" class="keyVisualImg">
+            <div class="keyVisualImg2">
+                <div><img src="images/keyVisual1_.jpg" alt="里山風景" class="keyVisual1"></div>
+                <div><img src="images/keyVisual2_.jpg" alt="カフェイメージ" class="keyVisual2"></div>
+            </div>
 
             <h2 class="catchphrase1">町田のぜんぶ、いただこう</h2>
             <img src="images/logo_2.png" alt="里山カフェ" class="logo_2">
@@ -184,6 +187,19 @@
             navMenu.classList.toggle('is-open');
         });
     </script>
+
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.keyVisualImg2').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 3000,
+            });
+        });</script>
+
 </body>
 
 </html>

@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SatoYama cafe</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/jquery-1.10.2.min.js"></script>
-    <script src="js/main.js"></script>
+    
 </head>
 
 <body>
@@ -24,9 +23,9 @@
                 <ul>
                     <li><a href="index.html">About us</a></li>
                     <li><a href="menu.html" class="current">Menu</a></li>
-                    <li><a href="location.html">location</a></li>
+                    <li><a href="location.html">Location</a></li>
                     <li><a href="hike.html">Hike</a></li>
-                    <li><a href="#">Calender</a></li>
+                    <li><a href="calender.html">Calender</a></li>
                 </ul>
             </nav>
             <section class="shopWeather">
@@ -51,19 +50,19 @@
 
     <main>
         <section class="menu1">
-            <h2>町田の新鮮なお野菜と焼きたてパン、美味しいコーヒー<br>
-                ハイキングあとにぴったりなお飲み物もご用意しております。</h2>
+            <P class="menuText">町田の新鮮なお野菜と焼きたてパン、美味しいコーヒー<br>
+                ハイキングのあとにぴったりなお飲み物もご用意しております。</p>
             <div class="items1">
                 <div class="drink">
                     <a href="menu_drink.html"><img src="images/320x180_coffee.png" alt="ドリンク" class="coffee"></a>
                     <p><span>Drink</span><br>オーガニックコーヒーや季節のお飲み物等、ご用意しております。</p>
                 </div>
                 <div class="Lunch">
-                    <a href="menu_lunch.html"><img src="images/320x180_lunch.png" alt="ランチ"></a>
+                    <a href="menu_lunch.html"><img src="images/320x180_lunch.png" alt="ランチ" class="coffee"></a>
                     <p class="Lunch"><span>Lunch</span><br>町田産の野菜を使った「今週の季節の一皿」</p>
                 </div>
                 <div class="fingerfood">
-                    <a href="menu_fingerfood.html"><img src="images/320x180_fingerfood.png" alt="フィンガーフード"></a>
+                    <a href="menu_fingerfood.html"><img src="images/320x180_fingerfood.png" alt="フィンガーフード" class="coffee"></a>
                     <p><span>Finger Food</span><br>ちょっとつまめる軽食、小さなキッシュやカナッペ、焼き菓子などをご用意しております。</p>
                 </div>
             </div>
@@ -112,6 +111,8 @@
             navMenu.classList.toggle('is-open');
         });
     </script>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    
 </body>
 
 </html>
